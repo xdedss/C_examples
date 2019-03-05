@@ -10,7 +10,7 @@ int main(){
 	//①求和公式 
 	int n;
 	scanf("%d", &n);
-	int result = (n * (n + 1)) / 2;
+	int result = ((n + 1) * n) / 2;
 	if(n <= 0){
 		printf("WRONG FORMAT!");
 	}

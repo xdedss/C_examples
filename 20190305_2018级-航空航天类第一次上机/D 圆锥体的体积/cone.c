@@ -11,10 +11,9 @@ int main(){
 	*/ 
 	
 	float l, r;
-	float PI = 3.1415927f;
 	scanf("%f %f", &l, &r);
 	float height = sqrt(l * l - r * r);
-	float area = PI * r * r;
+	float area = 3.1415927 * r * r;
 	printf("%.2f", height * area / 3);
 	return 0;
 }

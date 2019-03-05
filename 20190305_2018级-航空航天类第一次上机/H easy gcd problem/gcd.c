@@ -7,16 +7,16 @@ int main(){
 	scanf("%d %d", &a, &b);
 	while(a != b){
 		if(a > b){
-			a -= b;
+			a = a - b;
 		}
 		else{
-			b -= a;
+			b = b - a;
 		}
 	}
 	printf("%d", a);
 	return 0;
 	
 	
-	//②ppt上的枚举法 
+	//②参考ppt上的枚举法 
 	
 }

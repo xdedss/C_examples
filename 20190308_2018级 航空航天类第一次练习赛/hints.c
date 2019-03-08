@@ -66,6 +66,8 @@ int main(){
 	printf("%o\n", a);
 	//打出二进制需要算一算
 	//方法1 按除以二取余的方式
+	int bitCount = 0;
+	int b = a;
 	//方法2 位运算
 	int bitIndex = 10;//最大1000不会超过10位
 	bool hadNum = false;

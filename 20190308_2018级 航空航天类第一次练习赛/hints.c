@@ -60,20 +60,20 @@ int main(){
 	//D bzbd的td
 	
 	printf("----D bzbd的td\n");
-	int a = 1000;
+	int td = 1000;
 	//直接打出大写十六进制，用 %X 
-	printf("%X\n", a);
+	printf("%X\n", td);
 	//直接打出八进制，用 %o
-	printf("%o\n", a);
+	printf("%o\n", td);
 	//打出二进制需要算一算
 	//方法1 按除以二取余的方式
 	int bitCount = 0;
-	int b = a;
+	int a = td;
 	int sum = 0;
-	while(b){
-		int mod = b % 2;
+	while(a){
+		int mod = a % 2;
 		sum += pow(10, bitCount) * mod;
-		b /= 2;
+		a /= 2;
 		bitCount++;
 	}
 	printf("%d\n", sum);
@@ -82,7 +82,7 @@ int main(){
 	bool hadNum = false;
 	while(bitIndex > 0){
 		bitIndex--;
-		bool hasNum = a & (1 << bitIndex);//<<移位操作判断这一位有没有数 
+		bool hasNum = td & (1 << bitIndex);//<<移位操作判断这一位有没有数 
 		hadNum |= hasNum;
 		hadNum |= bitIndex == 0;
 		printf(hadNum ? hasNum ? "1" : "0" : "");

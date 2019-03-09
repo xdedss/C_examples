@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main(){
 	// 先做 E 和 F，简单而且没什么坑 
@@ -68,6 +69,14 @@ int main(){
 	//方法1 按除以二取余的方式
 	int bitCount = 0;
 	int b = a;
+	int sum = 0;
+	while(b){
+		int mod = b % 2;
+		sum += pow(10, bitCount) * mod;
+		b /= 2;
+		bitCount++;
+	}
+	printf("%d\n", sum);
 	//方法2 位运算
 	int bitIndex = 10;//最大1000不会超过10位
 	bool hadNum = false;

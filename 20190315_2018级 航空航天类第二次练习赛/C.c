@@ -9,7 +9,7 @@ int main(){
 	double seconds_double = (minutes_double - (int)minutes_double) * 60;
 	int hours = (int)(minutes_double / 60);
 	int minutes = (int)(minutes_double - hours * 60);
-	if(hours == 12) hour = 0;//一个潜在的坑：12:00等于0:00 
-	printf("%d:%d:%.7lf", hour, minutes, seconds_double);
+	if(hours == 12) hours = 0;//一个潜在的坑：12:00等于0:00 
+	printf("%d:%d:%.7lf", hours, minutes, seconds_double);
 	
 }

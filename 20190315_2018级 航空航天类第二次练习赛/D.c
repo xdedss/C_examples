@@ -20,6 +20,6 @@ int main(){
 	scanf("%d %d %d %d", &a_left, &a_down, &a_right, &a_up);
 	scanf("%d %d %d %d", &b_left, &b_down, &b_right, &b_up);
 	int sum = (a_right - a_left) * (a_up - a_down) + (b_right - b_left) * (b_up - b_down);
-	int c = overlap(a_left, a_right, b_left, b_right) * overlap(a_down, a_up, b_down, bu);//横向重合乘以竖向重合 
+	int c = overlap(a_left, a_right, b_left, b_right) * overlap(a_down, a_up, b_down, b_up);//横向重合乘以竖向重合 
 	printf("%d", sum - c);
 }
